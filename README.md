@@ -1,10 +1,23 @@
 # fuwatto-analyzer
 
-ふわっとポエムなスカウト文や求人票を自動判定して、**ふわっと度** と **本気度** を可視化する Python/Streamlit ツールです。
-※ Python と Streamlit が使える方を対象としています
----
+[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.25+-orange)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
+求人票やスカウト文の「ふわっと感」や「本気度」を可視化する Python/Streamlit ツールです。
+
+## 対象者
+- Python と Streamlit が使える方
+- スカウト文の「ふわっと感」をざっくり把握したい方
+- 求人票の具体性や本気度を簡単に可視化したい方
+- 辞書を差し替えて、自分オリジナルの判定ルールを作りたい方
 
 ## 概要
+このツールは、求人票やスカウト文に含まれる「ふわっとした表現」や「本気度」を定量的に評価し、
+可視化することを目的としています。
+これにより、企業のメッセージの明確さや誠実さを評価し、求職者がより適切な選択をできるよう支援します。
+
 - スカウト文の「ふわっと感」をざっくり把握したい  
 - 求人票の具体性や本気度を簡単に可視化したい  
 - 辞書を差し替えて、自分オリジナルの判定ルールに対応したい  
@@ -12,13 +25,19 @@
 ---
 
 ## 特徴
-- **ふわっとワード / 本気ワード** のスコア付き辞書で判定  
-- CSV辞書をアップロードすれば辞書を簡単に切り替え可能  
-- 文章ごとの累計スコアと比率を DataFrame で表示  
-- 単語ごとのスコアも確認可能  
-- Streamlit で即時可視化（棒グラフ表示）
-
+- 辞書を用いた「ふわっと度」と「本気度」のスコアリング
+- CSV形式の辞書をアップロードしてカスタマイズ可能
+- 分析結果を棒グラフで可視化（Streamlit対応）
+- 単語ごとのスコアも確認可能
 ---
+
+## インストール
+
+```bash
+git clone https://github.com/iwakazusuwa/fuwatto-analyzer.git
+cd fuwatto-analyzer
+pip install -r requirements.txt
+```
 
 ## 実行
 ```
@@ -52,8 +71,13 @@ streamlit run fuwatto-analyzer.py
 - 分析対象や辞書を自由に拡張できるように進化予定
 
 
+## 貢献方法
+プロジェクトへの貢献は以下の方法で歓迎します：
+- バグ報告や機能追加の提案は Issues を通じて行ってください。
+- コードの改善や新機能の追加は Pull Request を作成してください。
+- ドキュメントの改善や翻訳も歓迎します。
+
 ## LICENSE
 MIT License（詳細はLICENSEファイルをご参照ください）
 
 #### 開発者： iwakazusuwa(Swatchp)
-<img width="254" height="101" alt="image" src="https://github.com/user-attachments/assets/fbfe3b83-071f-4dbf-8482-f6215ed31b6c" />
